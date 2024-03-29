@@ -1,0 +1,21 @@
+<app-navbar></app-navbar>
+<div class="users" id="users">
+
+    <div class="container">
+        <div class="box">
+            <div class="info-user">
+                <div>
+                    <img decoding="async" [src]="user.avatar" alt="user?.first_name">
+                </div>
+                <div class="content">
+                    <h5>{{user?.first_name}} {{user?.last_name}}</h5>
+                    <p>{{user?.email}}</p>
+                </div>
+            </div>
+            <div class="info">
+                <button [routerLink]="user.id" (click)="goBack()">Back</button>
+
+            </div>
+        </div>
+    </div>
+</div>

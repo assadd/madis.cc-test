@@ -1,0 +1,8 @@
+<nav class="navbar">
+    <div class="container">
+        <div class="navbar-brand"><img class="logo" src="assets/images/logo.png"></div>
+        <ul class="navbar-menu" *ngIf="displaySearch">
+            <input type="text" placeholder="Search..." [formControl]="searchQuery">
+        </ul>
+    </div>
+</nav>

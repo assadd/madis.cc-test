@@ -1,0 +1,29 @@
+<app-navbar [displaySearch]="true" (searchResult)="handleSearchResult($event)"></app-navbar>
+<div *ngIf="users.length > 0; else noUsersFound" class="users" id="users">
+    <h2 class="main-title">Users</h2>
+    <div class="container">
+        <div class="box" *ngFor="let user of users" [routerLink]="user.id">
+            <div class="info">
+                <div>
+                    <img decoding="async" [src]="user.avatar" alt="user?.first_name">
+                </div>
+                <div class="content">
+                    <h5>{{user?.first_name}} {{user?.last_name}}</h5>
+                    <p>{{user?.email}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pagination">
+
+        <button mat-flat-button color="primary" (click)="prevPage()" [disabled]="currentPage === 1">Previous</button>
+        <span>Page {{currentPage}} of {{totalPages()}}</span>
+        <button mat-flat-button color="primary" (click)="nextPage()"
+            [disabled]="currentPage === totalPages()">Next</button>
+    </div>
+</div>
+<ng-template #noUsersFound>
+    <div class="no-users-message">
+        No users found.
+    </div>
+</ng-template>

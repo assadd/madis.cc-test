@@ -1,0 +1,41 @@
+$navbar-bg-color: #333;
+$navbar-brand-color: #fff;
+
+.navbar {
+    background-color: $navbar-bg-color;
+    padding: 2px 0;
+
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .navbar-brand {
+        color: $navbar-brand-color;
+        font-weight: bold;
+        font-size: 20px;
+
+        .logo {
+            width: 50px;
+            height: 30px;
+        }
+    }
+
+    .navbar-menu {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+
+        input {
+            border-radius: 0.1rem;
+            padding: 0.5rem 1rem;
+        }
+    }
+
+}

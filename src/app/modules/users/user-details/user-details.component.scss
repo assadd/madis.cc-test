@@ -1,0 +1,66 @@
+.users {
+    padding-top: 2rem;
+    position: relative;
+
+    .box {
+        box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
+        background-color: white;
+        margin: auto;
+        width: fit-content;
+        border-radius: 6px;
+        overflow: hidden;
+        transition: transform var(0.3s), box-shadow var(0.3s);
+
+        .info-user {
+            display: flex;
+
+
+            img {
+
+                width: 70px;
+                height: 70px;
+                border-radius: 50%;
+                margin-left: 1rem;
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+            }
+
+            .content {
+                padding: 20px;
+
+                h5 {
+                    margin: 0.5rem;
+                }
+
+                p {
+                    margin: 0.5rem;
+                    line-height: 1.2;
+                    font-size: 0.6rem;
+                    color: #777;
+                }
+            }
+        }
+
+        .info {
+            padding: 20px;
+            border-top: 1px solid #e6e6e7;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            button {
+
+                font-weight: bold;
+                background: #4f2ba6;
+                padding: 0.5rem 1rem;
+                color: white;
+                border-radius: 0.3rem;
+            }
+        }
+    }
+
+    .box:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 2px 15px rgb(0 0 0 / 20%);
+    }
+}
